@@ -1,7 +1,6 @@
 <h1 align="center">Der Beta Kevin’s configuration files and more</h1>
 
-## English
 My compilation of configuration files and more. Feel free to poke around and if you have any ideas or improvements, let me know via a merge request.
 
-## German/Deutsch
-Meine Sammlung an Konfigurationsdateien und mehr. Schaue dich ruhig um und wenn du Ideen oder Verbesserungen haben solltest, lass es mich über eine Merge-Anfrage wissen.
+### Tutorials
+* [qt-programs under Arch Gnome in Dark Mode](https://github.com/derbetakevin/dotfiles/wiki/qt-programs-under-Arch-Gnome-in-Dark-Mode)
