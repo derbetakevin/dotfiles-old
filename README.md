@@ -3,4 +3,4 @@
 My compilation of configuration files and more. Feel free to poke around and if you have any ideas or improvements, let me know via a merge request.
 
 ### Tutorials
-* [qt-programs under Arch Gnome in Dark Mode](https://github.com/derbetakevin/dotfiles/wiki/qt-programs-under-Arch-Gnome-in-Dark-Mode)
+* [QT programs on Arch in Dark Mode](https://github.com/derbetakevin/dotfiles/wiki/QT-programs-on-Arch-in-Dark-Mode)
