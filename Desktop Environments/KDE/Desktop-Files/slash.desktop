@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=FileManager;Utility;Core;GTK;
+Comment[de_DE]=Externe Datenträger
+Comment=Externe Datenträger
+Exec=dolphin /
+GenericName[de_DE]=
+GenericName=
+Icon=drive-harddisk-root
+MimeType=inode/directory;inode/directory;
+Name[de_DE]=openSUSE Tumbleweed
+Name=openSUSE Tumbleweed
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

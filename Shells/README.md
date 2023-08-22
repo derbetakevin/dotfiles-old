@@ -3,5 +3,5 @@
 |Shell|Configuration-File|Link|
 |-|-|-|
 |bash|❌|https://www.gnu.org/software/bash/|
-|fish|❌|https://fishshell.com/|
+|fish|✅|https://fishshell.com/|
 |zsh|✅|https://www.zsh.org/|

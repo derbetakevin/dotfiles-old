@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=FileManager;Utility;Core;GTK;
+Comment[de_DE]=open network via GVFS
+Comment=open network via GVFS
+Exec=dolphin network:///
+GenericName[de_DE]=
+GenericName=
+Icon=network-idle
+MimeType=inode/directory;inode/directory;
+Name[de_DE]=Netzwerkumgebung
+Name=Netzwerkumgebung
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

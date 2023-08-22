@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Icon=user-trash
+Name=Trash
+Name[de]=Papierkorb
+Comment=open trash
+Categories=FileManager;Utility;Core;GTK;
+Exec=dolphin trash:///
+StartupNotify=true
+Terminal=false
+MimeType=x-directory/normal;inode/directory;

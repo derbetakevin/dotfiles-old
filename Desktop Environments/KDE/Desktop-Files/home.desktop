@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=FileManager;Utility;Core;GTK;
+Comment[de_DE]=open home folder
+Comment=open home folder
+Exec=dolphin /home/DerBetaKevin
+GenericName[de_DE]=
+GenericName=
+Icon=go-home
+MimeType=inode/directory;inode/directory;
+Name[de_DE]=Eigene Dateien
+Name=Eigene Dateien
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
