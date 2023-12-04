@@ -92,15 +92,14 @@ end
 
 # Flex
 pfetch
-echo "Fish macht Blub, also lass uns Ficken Bby!"
+echo "🐟🐟🐟 Fish macht Blub! 🐟🐟🐟"
 
-# Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
-alias ip="ip -color"
+# Replace ls with eza
+alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+alias l.="eza -a | egrep '^\.'"                                     # show only dotfiles
 
 #Get confirmation prompt when dealing with files
 alias cp='cp -i -v'
@@ -126,7 +125,6 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias hw='hwinfo --short'                          # Hardware Info
 
 #The universal package managers
 alias flatin='flatpak install'
@@ -141,16 +139,19 @@ alias btw='neofetch'
 alias btsw='fastfetch'
 alias btscreenw='screenfetch'
 alias uwu='uwufetch'
+alias hy='hyfetch'
 
 #View information about your hardware
+alias hw='hwinfo --short'
 alias raminfo='sudo dmidecode --type 17'
 alias cpuinfo='sudo dmidecode --type 4'
 alias mbinfo='sudo dmidecode --type 1'
 
 #Sonstiges
-alias honeygain='sudo ~/.local/share/honeygain.sh'
 alias logging='sudo journalctl -f'
 alias please='sudo'
+alias wetter='curl wttr.in/Nordenham'
+alias vencord-installer='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -178,7 +179,7 @@ alias lastpkg="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl
 alias allupdate='sudo snap refresh --list && sudo snap refresh && flatpak update && paru'
 alias updateall='sudo snap refresh --list && sudo snap refresh && flatpak update && paru'
 alias byebyewiegehts='sudo snap refresh --list && sudo snap refresh && flatpak update && paru && reboot'
-alias fuckoff='sudo snap refresh --list && sudo snap refresh && flatpak update && paru && poweroff'
+alias luckoff='sudo snap refresh --list && sudo snap refresh && flatpak update && paru && poweroff'
 
 #---Fedora + RHEL---
 #Package Manager
@@ -192,10 +193,20 @@ alias dnfsync='sudo dnf distro-sync'
 alias allupdate='flatpak update && sudo dnf update'
 alias updateall='flatpak update && sudo dnf update'
 alias byebyewiegehts='flatpak update && sudo dnf update && reboot'
-alias fuckoff='flatpak update && sudo dnf update && poweroff'
+alias luckoff='flatpak update && sudo dnf update && poweroff'
 
 #---NixOS---
-#Updates
+#Updates with Flakes on amdryzen
+alias gitflake='cd /home/derbetakevin/Development/nixos-flakes ; git fetch origin ; git pull'
+alias update='nix flake update /home/derbetakevin/Development/nixos-flakes && sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#amdryzen'
+alias rebuild='sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#amdryzen'
+alias genrm='sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old && nix-collect-garbage -d && sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#amdryzen'
+#Updates with Flakes on acertravelmate
+alias gitflake='cd /home/derbetakevin/Development/nixos-flakes ; git fetch origin ; git pull'
+alias update='nix flake update /home/derbetakevin/Development/nixos-flakes && sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#acertravelmate'
+alias rebuild='sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#acertravelmate'
+alias genrm='sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old && nix-collect-garbage -d && sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#acertravelmate'
+#Updates without Flakes
 alias updateall='sudo nixos-rebuild switch --upgrade && nix-env --upgrade'
 alias update='sudo nixos-rebuild switch --upgrade'
 alias upgrade='sudo nixos-rebuild switch --upgrade'
@@ -203,7 +214,7 @@ alias rebuild='sudo nixos-rebuild switch'
 alias genrm='sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old && nix-collect-garbage -d && sudo nixos-rebuild switch'
 #Other
 alias conf='sudo vim /etc/nixos/configuration.nix'
-alias nix='neofetch'
+set -x NIXOS_GENERATION (readlink /nix/var/nix/profiles/system)
 
 #---openSUSE Tumbleweed---
 #Package managers
@@ -215,12 +226,12 @@ alias zypse='sudo zypper search --details'
 alias zypsegrep='sudo zypper search -i --details | grep'
 alias zyprepos='sudo zypper repos --details'
 alias zypref='sudo zypper refresh'
-alias updates='bash /home/DerBetaKevin/HDD/OneDrive/Software/Linux/updates-opensuse.sh'
-alias fuckoff='sudo snap refresh --list && sudo snap refresh && flatpak update && sudo zypper dup && poweroff'
+alias updates='bash /home/DerBetaKevin/OneDrive/Software/Linux/updates-opensuse.sh'
+alias luckoff='sudo snap refresh --list && sudo snap refresh && flatpak update && sudo zypper dup && poweroff'
 alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
 
-#---Ubuntu Pro 16.04 ESM---
+#---Ubuntu---
 #Updates
 alias aptup='sudo apt update && sudo apt dist-upgrade'
 alias aptin='sudo apt install'
@@ -230,4 +241,8 @@ alias clean='sudo apt autoremove'
 alias allupdate='sudo snap refresh && flatpak update && sudo apt update && sudo apt dist-upgrade'
 alias updateall='sudo snap refresh && flatpak update && sudo apt update && sudo apt dist-upgrade'
 alias byebyewiegehts='sudo snap refresh && flatpak update && sudo apt update && sudo apt dist-upgrade && reboot'
-alias fuckoff='sudo snap refresh && flatpak update && sudo apt update && sudo apt dist-upgrade && poweroff'
+alias luckoff='sudo snap refresh && flatpak update && sudo apt update && sudo apt dist-upgrade && poweroff'
+alias nalain='sudo nala install'
+alias nalarm='sudo nala remove'
+alias pkgin='rhino-pkg install'
+alias updates='bash /home/derbetakevin/OneDrive/Software/Linux/updates-ubuntu.sh
