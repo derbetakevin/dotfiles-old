@@ -19,7 +19,8 @@ case $option in
     nix flake update /home/derbetakevin/Development/nixos-flakes
     echo -e "Flake geupdated."
     ;;
-  2)
+  2)    
+    sudo -v
     echo -e "\n\e[1m\e[31m1/2 (50%)Updaten des Flakes... \e[0m\n"
     nix flake update /home/derbetakevin/Development/nixos-flakes
     
@@ -27,7 +28,8 @@ case $option in
     sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#amdryzen
     echo -e "NixOS geupdated."
     ;;  
-  3)
+  3)    
+    sudo -v
     echo -e "\n\e[1m\e[34mAnwenden von LOKALEN Konfigurationsänderungen auf NixOS... \e[0m\n"
     sudo nixos-rebuild switch --flake /home/derbetakevin/Development/nixos-flakes#amdryzen
     echo -e "LOKALE Konfigurationsänderungen auf NixOS angewendet."
